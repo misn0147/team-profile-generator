@@ -1,44 +1,38 @@
 const inquirer = require('inquirer');
-
+const fs = require('fs');
 const Manager = require('./lib/Manager');
+const generateHTML = require('./src/page-template');
 
-function Profile() {   
-}
 
-Profile.prototype.initialize = function() {
-    inquirer
-        .prompt(
+const enterManager = managerInput => {
+    return inquirer.prompt([
             {
-            type: 'text',
-            name: 'managerName',
+            type: 'input',
+            name: 'name',
             message: "What is your team manager's name?",
-            validate: managerNameInput => {
-                if (managerNameInput) {
-                    return true;
-                } else {
-                    console.log("Please enter your team manager's name.");
-                    return false;
-                }
-            }
-            })
-            .then(({name}) => {
-                this.manager = new Manager(name);
-            })
-        .prompt(    
+            },
             {
-            type: 'number',
-            name: 'managerId',
+            type: 'input',
+            name: 'id',
             message: "What is your team manager's employee ID?"
             },
             {
-            type: 'text',
-            name: 'managerEmail',
+            type: 'input',
+            name: 'email',
             message: "What is your team manager's email address?"
             },
             {
-            type: 'number',
-            name: 'managerOfficeNumber',
+            type: 'input',
+            name: 'officeNumber',
             message: "What is your team manager's office number?"
             },
-        )
+    ])
+        .then(managerInput => {
+            const { name, id, email, officeNumber} = managerInput;
+            const manager = new Manager (name, id, email, officeNumber);
+
+            console.log(manager);
+        })
 }
+
+enterManager();
