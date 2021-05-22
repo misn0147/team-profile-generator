@@ -8,7 +8,7 @@ const generateManagerCard = data => {
     </div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${data.id}</li>
-    <li class="list-group-item">Email: ${data.email}</li>
+    <li class="list-group-item">Email:<a href="mailto: ${data.email}"> ${data.email}</a></li>
     <li class="list-group-item">Office Number: ${data.officeNumber}</li>
     </ul>
     </div>
@@ -25,7 +25,7 @@ const generateEngineerCard = data => {
     </div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${data.id}</li>
-    <li class="list-group-item">Email: ${data.email}</li>
+    <li class="list-group-item">Email:<a href="mailto: ${data.email}"> ${data.email}</a></li>
     <li class="list-group-item">Github: ${data.github}</li>
     </ul>
     </div>
@@ -42,7 +42,7 @@ const generateInternCard = data => {
     </div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${data.id}</li>
-    <li class="list-group-item">Email: ${data.email}</li>
+    <li class="list-group-item">Email:<a href="mailto: ${data.email}"> ${data.email}</a></li>
     <li class="list-group-item">School: ${data.school}</li>
     </ul>
     </div>
