@@ -4,7 +4,7 @@ const generateManagerCard = data => {
     <div class="card bg-info" style="width: 18rem;">
     <div class="card-header">
     ${data.name} <br>
-    Manager
+    <i class="fas fa-mug-hot"></i> Manager
     </div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${data.id}</li>
@@ -21,12 +21,12 @@ const generateEngineerCard = data => {
     <div class="card bg-primary" style="width: 18rem;">
     <div class="card-header">
     ${data.name} <br>
-    Engineer
+    <i class="fas fa-glasses"></i> Engineer
     </div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${data.id}</li>
     <li class="list-group-item">Email:<a href="mailto: ${data.email}"> ${data.email}</a></li>
-    <li class="list-group-item">Github: ${data.github}</li>
+    <li class="list-group-item">Github:<a href="https://github.com/${data.github}" target="_blank"> ${data.github}</a></li>
     </ul>
     </div>
     
@@ -38,7 +38,7 @@ const generateInternCard = data => {
     <div class="card bg-success" style="width: 18rem;">
     <div class="card-header">
     ${data.name} <br>
-    Intern
+    <i class="fas fa-user-graduate"></i> Intern
     </div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${data.id}</li>

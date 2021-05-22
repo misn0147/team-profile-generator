@@ -1,3 +1,4 @@
+
 header {
     background-color: salmon;
     text-align: center;
@@ -9,11 +10,22 @@ header {
     padding: 15px;
 }
 
-
 .card {
     margin: 10px;
     max-width: 275px;
 }
+
+
+.card-header {
+    color: white; 
+    font-size: 25px;
+    font-weight: 450;
+}
+
+.list-group-item {
+    color: black;
+    font-weight: 500;
+} 
 
 .container, .row {
     padding-left: 20%;
