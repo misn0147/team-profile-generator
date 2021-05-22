@@ -1,9 +1,9 @@
 const generateManagerCard = data => {
     return `
     
-    <div class="card" style="width: 18rem;">
+    <div class="card bg-info" style="width: 18rem;">
     <div class="card-header">
-    ${data.name}
+    ${data.name} <br>
     Manager
     </div>
     <ul class="list-group list-group-flush">
@@ -18,9 +18,9 @@ const generateManagerCard = data => {
 const generateEngineerCard = data => {
     return `
     
-    <div class="card" style="width: 18rem;">
+    <div class="card bg-primary" style="width: 18rem;">
     <div class="card-header">
-    ${data.name}
+    ${data.name} <br>
     Engineer
     </div>
     <ul class="list-group list-group-flush">
@@ -35,9 +35,9 @@ const generateEngineerCard = data => {
 const generateInternCard = data => {
     return `
     
-    <div class="card" style="width: 18rem;">
+    <div class="card bg-success" style="width: 18rem;">
     <div class="card-header">
-    ${data.name}
+    ${data.name} <br>
     Intern
     </div>
     <ul class="list-group list-group-flush">
