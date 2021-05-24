@@ -14,6 +14,14 @@ const enterManager = managerInput => {
             type: 'input',
             name: 'name',
             message: "What is your team manager's name?",
+                validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the team manager's name!");
+                    return false;
+                }
+                }
             },
             {
             type: 'input',
