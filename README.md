@@ -4,6 +4,7 @@
 ## Description
 Command line application that generates a team profile for different employee positions using user input from prompts
 
+![image](https://user-images.githubusercontent.com/79875711/119415395-24f4eb80-bcb7-11eb-904c-cd40a8932bff.png)
 
 
 
