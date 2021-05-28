@@ -96,17 +96,14 @@ const addEmployee = () => {
             let employee = new Engineer (name, id, email, github);
             var newEngineer = generateEngineerCard(employee);
             allEmployees.push(newEngineer);
-            console.log(employee);
         } else if (role === "Intern") {
             let employee = new Intern (name, id, email, school);
             var newIntern = generateInternCard(employee);
             allEmployees.push(newIntern);
-            console.log(employee);
         }
         if (confirmAddEmployee) {
             return addEmployee();
         } else {
-            console.log(allEmployees);
             var template = generatePage(allEmployees)
             fs.writeFile('TeamProfile.html', template, function(err) {
             if (err) {
